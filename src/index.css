@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+:root {
+  --goa-coral: #FF6B6B;
+  --goa-gold: #FF9F43;
+  --goa-teal: #00D2D3;
+  --goa-palm: #10AC84;
+  --goa-pink: #FF4757;
+  --goa-purple: #5F27CD;
+  --bg-goa-dark: #0d1b2a;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(145deg, #09131f 0%, #132238 35%, #241624 70%, #361720 100%);
+  color: #f1f5f9;
+  min-height: 100vh;
+  margin: 0;
+  background-attachment: fixed;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Warm Colorful Glassmorphism Panels */
+.glass-panel {
+  background: rgba(23, 33, 53, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 159, 67, 0.2);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
+}
+
+.glass-panel-interactive {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-interactive:hover {
+  border-color: rgba(255, 159, 67, 0.5);
+  box-shadow: 0 0 30px rgba(255, 159, 67, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Colorful Glow Utilities */
+.glow-coral {
+  box-shadow: 0 0 25px rgba(255, 107, 107, 0.4);
+}
+
+.glow-gold {
+  box-shadow: 0 0 25px rgba(255, 159, 67, 0.4);
+}
+
+.glow-turquoise {
+  box-shadow: 0 0 25px rgba(0, 210, 211, 0.4);
+}
+
+.text-glow-coral {
+  text-shadow: 0 0 14px rgba(255, 107, 107, 0.6);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 14px rgba(255, 159, 67, 0.6);
+}
+
+/* 3D Tilt Card Base & Glow */
+.perspective-container {
+  perspective: 1500px;
+}
+
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.card-3d-inner {
+  transform-style: preserve-3d;
+}
+
+.card-layer-depth-1 {
+  transform: translateZ(20px);
+}
+
+.card-layer-depth-2 {
+  transform: translateZ(40px);
+}
+
+.card-layer-depth-3 {
+  transform: translateZ(60px);
+}
+
+/* Tropical Holographic Scan Effect */
+@keyframes tropicalScan {
+  0% {
+    top: -10%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 110%;
+    opacity: 0;
+  }
+}
+
+.scan-laser-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #FF9F43 20%, #ffffff 50%, #FF6B6B 80%, transparent);
+  box-shadow: 0 0 20px #FF9F43, 0 0 35px #FF6B6B;
+  z-index: 40;
+  pointer-events: none;
+  animation: tropicalScan 2.6s linear infinite;
+}
+
+.scan-grid-overlay {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 159, 67, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 159, 67, 0.15) 1px, transparent 1px);
+}
+
+/* Tropical Foil Shimmer FX */
+@keyframes tropicalShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.hologram-shimmer {
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    rgba(255, 159, 67, 0.2) 40%,
+    rgba(255, 71, 87, 0.25) 50%,
+    rgba(0, 210, 211, 0.2) 60%,
+    transparent 80%
+  );
+  background-size: 200% 100%;
+  animation: tropicalShimmer 5s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09131f;
+}
+::-webkit-scrollbar-thumb {
+  background: #24354a;
+  border-radius: 4px;
+  border: 2px solid #09131f;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF9F43;
+}
