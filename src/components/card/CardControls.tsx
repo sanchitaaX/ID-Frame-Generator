@@ -159,10 +159,10 @@ export const CardControls: React.FC<CardControlsProps> = ({
       </div>
 
       {/* Tabs Bar */}
-      <div className="grid grid-cols-4 gap-2 mb-6 p-1 bg-black/40 rounded-2xl border border-white/15">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6 p-1.5 bg-black/40 rounded-2xl border border-white/15">
         <button
           onClick={() => { audioEngine.playClickSound(); setActiveTab('profile'); }}
-          className={`py-2 text-xs font-mono font-bold rounded-xl flex items-center justify-center gap-1.5 transition ${
+          className={`py-2 text-[11px] sm:text-xs font-mono font-bold rounded-xl flex items-center justify-center gap-1 transition ${
             activeTab === 'profile' ? 'bg-[#FF9F43] text-black shadow-md' : 'text-gray-300 hover:text-white'
           }`}
         >
@@ -171,7 +171,7 @@ export const CardControls: React.FC<CardControlsProps> = ({
 
         <button
           onClick={() => { audioEngine.playClickSound(); setActiveTab('stack'); }}
-          className={`py-2 text-xs font-mono font-bold rounded-xl flex items-center justify-center gap-1.5 transition ${
+          className={`py-2 text-[11px] sm:text-xs font-mono font-bold rounded-xl flex items-center justify-center gap-1 transition ${
             activeTab === 'stack' ? 'bg-[#FF9F43] text-black shadow-md' : 'text-gray-300 hover:text-white'
           }`}
         >
@@ -180,7 +180,7 @@ export const CardControls: React.FC<CardControlsProps> = ({
 
         <button
           onClick={() => { audioEngine.playClickSound(); setActiveTab('squad'); }}
-          className={`py-2 text-xs font-mono font-bold rounded-xl flex items-center justify-center gap-1.5 transition ${
+          className={`py-2 text-[11px] sm:text-xs font-mono font-bold rounded-xl flex items-center justify-center gap-1 transition ${
             activeTab === 'squad' ? 'bg-[#FF9F43] text-black shadow-md' : 'text-gray-300 hover:text-white'
           }`}
         >
@@ -189,7 +189,7 @@ export const CardControls: React.FC<CardControlsProps> = ({
 
         <button
           onClick={() => { audioEngine.playClickSound(); setActiveTab('style'); }}
-          className={`py-2 text-xs font-mono font-bold rounded-xl flex items-center justify-center gap-1.5 transition ${
+          className={`py-2 text-[11px] sm:text-xs font-mono font-bold rounded-xl flex items-center justify-center gap-1 transition ${
             activeTab === 'style' ? 'bg-[#FF9F43] text-black shadow-md' : 'text-gray-300 hover:text-white'
           }`}
         >

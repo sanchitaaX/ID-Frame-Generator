@@ -139,7 +139,7 @@ export function App() {
         {/* Generator Studio Layout (3D Card on left, Controls on right) */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
           {/* Left Column: 3D Tilt Card Display Area */}
-          <div className="lg:col-span-5 flex flex-col items-center sticky top-24">
+          <div className="lg:col-span-5 flex flex-col items-center lg:sticky lg:top-24">
             <div className="relative w-full flex flex-col items-center">
               {/* Scan Toggle quick button above card */}
               <div className="mb-3 flex items-center justify-between w-full max-w-[410px] px-2">

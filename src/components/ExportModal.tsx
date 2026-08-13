@@ -44,7 +44,10 @@ export const ExportModal: React.FC<ExportModalProps> = ({
       const link = document.createElement('a');
       link.download = `HH_Goa_2026_ID_${pass.name.replace(/\s+/g, '_')}.png`;
       link.href = dataUrl;
+      link.target = '_blank';
+      document.body.appendChild(link);
       link.click();
+      document.body.removeChild(link);
 
       confetti({
         particleCount: 90,
